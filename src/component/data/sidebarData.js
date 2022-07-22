@@ -25,7 +25,8 @@ import iconsfill1 from "../../assets/icons/beginner.png"
 import iconsfill2 from "../../assets/icons/intermediate.png"
 import iconsfill3 from "../../assets/icons/expert.png"
 import Appearance from "../../pages/settings/appearance"
-import Informations from "../../pages/settings/information"
+import Informations from "../../pages/settings/personal"
+import Personal from "../../pages/settings/personal"
 
 // data course
 
@@ -128,7 +129,7 @@ export const itemSettings = [
 		image: img1,
 		layout: "/omni-course",
 		location: "/settings/personal-informations",
-		component: Informations,
+		component: Personal,
 	},
 	{
 		title: "Billing information",

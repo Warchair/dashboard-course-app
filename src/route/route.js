@@ -15,17 +15,8 @@ function Routing() {
 				<Route path='/omni-course/planning' element={<Overview />} />
 				<Route path='/omni-course/statistic' element={<Statistic />} />
 				<Route path='/omni-course/message' element={<Overview />} />
-				<Route path='/omni-course/settings' element={<Settings />} />
+				<Route path='/omni-course/settings/*' element={<Settings />} />
 				<Route path='/omni-course/course/:id' element={<CourseDetail />} />
-				<Route
-					path='/omni-course/settings/personal-informations'
-					element={<CourseDetail />}
-				/>
-				<Route
-					path='/omni-course/settings/appearance'
-					element={<CourseDetail />}
-				/>
-
 				<Route
 					path='/'
 					element={<Navigate replace to='/omni-course/overview' />}
