@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react"
 import { Line } from "react-chartjs-2"
-import { activitiesData } from "../data/chartData"
+import { dataLearningPont } from "../data/chartData"
 
-const ChartLine = () => {
+const ChartLine2 = () => {
 	const [chartdata, setchartdata] = useState({})
 	const chart = () => {
 		setchartdata({
-			labels: activitiesData.map((item) => item.day),
+			labels: dataLearningPont.map((item) => item.month),
 			datasets: [
 				{
-					label: "Theory",
-					data: activitiesData.map((item) => item.theoryData),
-					tension: 0.5,
+					label: "Complete",
+					data: dataLearningPont.map((item) => item.complete),
+					tension: 0,
 					fill: false,
 					borderColor: "#269AFF",
 					pointBackgroundColor: "#0A0BEB",
@@ -22,11 +22,11 @@ const ChartLine = () => {
 					backgroundColor: ["transparent"],
 				},
 				{
-					label: "Practice",
-					data: activitiesData.map((item) => item.practiceData),
-					tension: 0.3,
-					borderColor: "#F5A840",
-					pointBackgroundColor: "#FFA824",
+					label: "Progress",
+					data: dataLearningPont.map((item) => item.progress),
+					tension: 0,
+					borderColor: "#269AFF",
+					pointBackgroundColor: "#0A0BEB",
 					pointBorderColor: "#FAFFFF",
 					pointBorderWidth: 1,
 					pointRadius: 4,
@@ -42,7 +42,7 @@ const ChartLine = () => {
 	}, [])
 
 	return (
-		<div className='h-[300px]'>
+		<div className='h-[250px]'>
 			<Line
 				data={chartdata}
 				options={{
@@ -54,8 +54,7 @@ const ChartLine = () => {
 							usePointStyle: true,
 							boxWidth: 6,
 						},
-						align: "end",
-						position: "bottom",
+						display: false,
 					},
 					tooltips: {
 						mode: "index",
@@ -65,9 +64,9 @@ const ChartLine = () => {
 						xAxes: [
 							{
 								gridLines: {
-									display: true,
+									display: false,
 									drawBorder: false,
-									zeroLineColor: "#F3F2F2",
+									zeroLineColor: "transparent",
 								},
 								ticks: {
 									beginAtZero: true,
@@ -81,14 +80,12 @@ const ChartLine = () => {
 								ticks: {
 									beginAtZero: true,
 									min: 0,
-									max: 60,
-									stepSize: 15,
-									callback: function (value, index, ticks) {
-										return value + " Hr"
-									},
+									max: 150,
+									stepSize: 50,
 								},
 								gridLines: {
 									display: false,
+									drawBorder: false,
 									zeroLineColor: "transparent",
 								},
 							},
@@ -100,4 +97,4 @@ const ChartLine = () => {
 	)
 }
 
-export default ChartLine
+export default ChartLine2

@@ -302,6 +302,33 @@ export const dataMenu = [
 	},
 ]
 
+export const dataClassCompleted = [
+	{
+		title: "Java Code",
+		count: "75",
+		colorBg: "bg-orange-100",
+		colorFill: "bg-orange-400",
+	},
+	{
+		title: "Design Basic",
+		count: "65",
+		colorBg: "bg-blue-100",
+		colorFill: "bg-blue-400",
+	},
+	{
+		title: "Team Building",
+		count: "30",
+		colorBg: "bg-indigo-100",
+		colorFill: "bg-indigo-400",
+	},
+	{
+		title: "Bussines",
+		count: "25",
+		colorBg: "bg-purple-100",
+		colorFill: "bg-purple-400",
+	},
+]
+
 // data sidebar account
 
 export const dataAccount = [

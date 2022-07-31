@@ -1,20 +1,30 @@
 import React, { useState, useEffect } from "react"
 import { Bar } from "react-chartjs-2"
-import { dataStatistics } from "../data/chartData"
+import { dataLearningPont2 } from "../data/chartData"
 
-const ChartBar = () => {
+const ChartBar2 = () => {
 	const [chartData, setchartData] = useState({})
 	const chart = () => {
 		setchartData({
-			labels: dataStatistics.map((item) => item.year),
+			labels: dataLearningPont2.map((item) => item.day),
 			datasets: [
 				{
-					labels: "Statistic Data",
-					data: dataStatistics.map((item) => item.data),
+					labels: "Your Point",
+					data: dataLearningPont2.map((item) => item.yourPoint),
+					backgroundColor: [
+						"#FFA952",
+						"#0177FB",
+						"#7D88FD",
+						"#EC5491",
+						"#0177FB",
+					],
+					barThickness: 25,
+				},
+				{
+					labels: "High Point",
+					data: dataLearningPont2.map((item) => item.highPoint),
 					backgroundColor: "#EFF2FF",
-					barThickness: 20,
-					hoverBackgroundColor: "#0177FB",
-					borderRadius: 2,
+					barThickness: 25,
 				},
 			],
 		})
@@ -24,8 +34,9 @@ const ChartBar = () => {
 	}, [])
 
 	return (
-		<div className='w-full'>
+		<div className='w-full h-[250px]'>
 			<Bar
+				className=''
 				data={chartData}
 				options={{
 					maintainAspectRatio: false,
@@ -41,6 +52,7 @@ const ChartBar = () => {
 					scales: {
 						xAxes: [
 							{
+								stacked: true,
 								gridLines: {
 									display: false,
 									drawBorder: false,
@@ -58,11 +70,12 @@ const ChartBar = () => {
 								ticks: {
 									beginAtZero: true,
 									min: 0,
-									max: 800,
-									stepSize: 200,
+									max: 4000,
+									stepSize: 1000,
 								},
 								gridLines: {
-									display: false,
+									display: true,
+									drawBorder: false,
 									zeroLineColor: "transparent",
 								},
 							},
@@ -74,4 +87,4 @@ const ChartBar = () => {
 	)
 }
 
-export default ChartBar
+export default ChartBar2

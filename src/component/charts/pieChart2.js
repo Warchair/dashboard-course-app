@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react"
-import { Chart } from "chart.js"
 import { Doughnut } from "react-chartjs-2"
 
-const ChartDoughnut = () => {
+const ChartDoughnut2 = (props) => {
 	const [chartData, setchartData] = useState({})
 	const chart = () => {
 		setchartData({
-			labels: ["Process", "in Process"],
+			labels: ["Week", "Month", "Year"],
 			datasets: [
 				{
 					labels: "Date of Week",
-					data: [75, 25],
-					backgroundColor: ["#0177FB", "#F3F2F2"],
+					data: props.data,
+					backgroundColor: ["#0177FB", "#FFA952", "#F3F2F2"],
 					borderRadius: [20, 0],
 				},
 			],
@@ -27,7 +26,7 @@ const ChartDoughnut = () => {
 			className='text-center w-full'
 			data={chartData}
 			options={{
-				maintainAspectRatio: false,
+				maintainAspectRatio: true,
 				responsive: true,
 				responsiveAnimationDuration: 2,
 				cutoutPercentage: 65,
@@ -39,8 +38,8 @@ const ChartDoughnut = () => {
 						usePointStyle: true,
 						boxWidth: 6,
 					},
-					align: "center",
-					position: "bottom",
+					align: "left",
+					position: "left",
 				},
 				tooltips: {
 					mode: "index",
@@ -51,4 +50,4 @@ const ChartDoughnut = () => {
 	)
 }
 
-export default ChartDoughnut
+export default ChartDoughnut2

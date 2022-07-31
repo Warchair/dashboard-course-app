@@ -43,7 +43,7 @@
     }
 
     .navbar-closed {
-        @apply  md:static absolute left-0 -top-40 md:py-0 md:px-0 py-4 px-4 md:opacity-100 opacity-0 transition-all duration-500 z-[99]
+        @apply md:static absolute left-0 -top-40 md:py-0 md:px-0 py-4 px-4 md:opacity-100 opacity-0 transition-all duration-500 z-[99]
     }
 
     .navbar-open {

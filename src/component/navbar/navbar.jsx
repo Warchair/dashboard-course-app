@@ -21,11 +21,11 @@ function Navbar(props) {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h7" />
                             </svg>
                         </button>
-                        <div className='logo-brand'>
+                    </div>
+                    <div className='logo-brand'>
                             <img src={logo} alt='' />
                             <h4 className='font-bold text-xl'>Omni.</h4>
                         </div>
-                    </div>
                     <button className='md:hidden block cursor-pointer' onClick={() => clickOpen()}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
