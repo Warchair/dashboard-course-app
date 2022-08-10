@@ -28,6 +28,60 @@ import Appearance from "../../pages/settings/appearance"
 import Informations from "../../pages/settings/personal"
 import Personal from "../../pages/settings/personal"
 
+// data message
+
+export const dataMessage = [
+	{
+		id: 1,
+		avatar: avatar1,
+		name: "Jonathan Benitez",
+		thumbMsg: "recently i came...",
+		time: "4.55pm",
+	},
+	{
+		id: 2,
+		avatar: avatar2,
+		name: "Monica Benitez",
+		thumbMsg: "Hello Worlds...",
+		time: "4.55pm",
+	},
+	{
+		id: 3,
+		avatar: avatar3,
+		name: "Johny Depp",
+		thumbMsg: "I am SuperStar...",
+		time: "4.55pm",
+	},
+	{
+		id: 1,
+		avatar: avatar1,
+		name: "Tony Stark",
+		thumbMsg: "my new technology will...",
+		time: "4.55pm",
+	},
+	{
+		id: 1,
+		avatar: avatar2,
+		name: "Jonathan Benitez",
+		thumbMsg: "recently i came...",
+		time: "4.55pm",
+	},
+	{
+		id: 1,
+		avatar: avatar3,
+		name: "Jonathan Benitez",
+		thumbMsg: "recently i came...",
+		time: "4.55pm",
+	},
+	{
+		id: 1,
+		avatar: avatar1,
+		name: "Jonathan Benitez",
+		thumbMsg: "recently i came...",
+		time: "4.55pm",
+	},
+]
+
 // data course
 
 export const dataCourse = [

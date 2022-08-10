@@ -32,10 +32,25 @@
 
 
 @layer utilities {
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
     
     /* navbar */
     .navbar {
         @apply flex justify-end fixed w-full bg-white px-4 md:z-[30] z-[998]
+    }
+    
+    .position-sticky {
+        position:sticky;
     }
 
     .body-navbar {
@@ -121,6 +136,12 @@
     }
 
 }
+
+
+
+.rbc-allday-cell {
+    display: none !important;
+  }
 
 
 

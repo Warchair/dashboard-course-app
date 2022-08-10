@@ -43,7 +43,7 @@ function Sidebar(props) {
 
 	return (
 			<div className={props.active === false ? 'md:block hidden' : "sidebar-mobile"  }>
-				<div className="sidebar-items">
+				<div className="sidebar-items no-scrollbar">
 					<div className="md:block hidden">
 						<div className='flex gap-3 items-center'>
 							<img src={logo} alt='' />
