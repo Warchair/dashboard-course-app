@@ -17,8 +17,7 @@ function CourseDetail() {
     console.log(data);
 
   return (
-    <div className='md:pl-12 pl-0 my-3 mt-20 '>
-        <div>
+        <div className='p-4'>
             <h3 className='text-2xl font-semibold'>Course</h3>
             <div className='grid grid-cols-7 gap-5 mt-3'>
                 <div className='lg:col-span-4 col-span-7 grid mt-3'>
@@ -96,7 +95,6 @@ function CourseDetail() {
                 </div>
             </div>
         </div>
-    </div>
   )
 }
 

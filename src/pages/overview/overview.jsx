@@ -4,40 +4,28 @@ import CardCompleted from '../../component/card/cardCompleted'
 import CardPlanning from '../../component/card/cardPlanning'
 import CardTopTutor from '../../component/card/cardTopTutor'
 import ChartBar from '../../component/charts/barChart';
-// import ChartBar from '../charts/barChart'
 import ChartLine from '../../component/charts/lineChart';
 import ChartDoughnut from '../../component/charts/pieChart';
-// import ChartDougnout from '../charts/pieChart'
 import { dataPlanning, dataTop, dataClassCompleted } from '../../component/data/sidebarData'
+import DropdownList from '../../component/dropdown/dropdownList';
+
 
 function Overview() {
-
-
   return (
-    <div className='grid grid-cols-7 gap-5 md:pl-12 pl-0 py-4 mt-20'>
+    <div className='grid grid-cols-7 gap-5 p-4'>
       <div className='xl:col-span-4 col-span-7 grid gap-5'>
         <div className='bg-white py-4 px-4 rounded-lg'>
-          <div className='py-3 flex flex-row justify-between'>
+          <div className='py-3 flex flex-row justify-between items-center'>
             <h5 className='font-semibold text-lg'>Activities</h5>
-            <select id="cars" className='border border-gray-300 rounded-full p-1 text-sm focus:outline-none'>
-              <option value="Week">Week</option>
-              <option value="Day">Day</option>
-              <option value="Month">Month</option>
-              <option value="Year">Year</option>
-            </select>
+            <DropdownList />
           </div>
           <ChartLine />
         </div>
         <div className='grid lg:grid-cols-7 grid-cols-1 gap-5'>
           <div className='bg-white py-4 px-4 rounded-lg lg:col-span-4'>
-            <div className='py-3 flex flex-row justify-between'>
+            <div className='py-3 flex flex-row justify-between items-center'>
               <h5 className='font-semibold text-lg'>Statistics</h5>
-              <select id="cars" className='border border-gray-300 rounded-full p-1 text-sm focus:outline-none'>
-                <option value="Week">Week</option>
-                <option value="Day">Day</option>
-                <option value="Month">Month</option>
-                <option value="Year">Year</option>
-              </select>
+              <DropdownList />
             </div>
               <ChartBar />
           </div>
@@ -66,14 +54,9 @@ function Overview() {
       </div>
       <div className='xl:col-span-3 col-span-7 grid gap-4 '>
         <div className='bg-white  rounded-lg px-4 py-2'>
-          <div className='py-4 flex items-center justify-between'>
+          <div className='py-4 flex items-center justify-between items-center'>
             <h4 className='font-medium text-lg'>My Planning</h4>
-            <select id="cars" className='border border-gray-300 rounded-full p-1 text-sm focus:outline-none'>
-              <option value="Week">Week</option>
-              <option value="Day">Day</option>
-              <option value="Month">Month</option>
-              <option value="Year">Year</option>
-            </select>
+            <DropdownList />
           </div>
           <div className=' grid grid-col-1 gap-3 py-2'>
             {dataPlanning.map((item) => {

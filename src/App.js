@@ -15,12 +15,15 @@ function App() {
 	return (
 		<div className='font-inter'>
 			<Router>
-				<div className='bg-gray-100 h-full w-full'>
-					<div className='side-bar'></div>
-					<Sidebar sidebarOpen={onClick} active={active} />
-					<Navbar sidebarOpen={onClick} />
-					<div className='w-full flex justify-end px-4'>
-						<Routing />
+				<div className='bg-gray-100 min-h-screen w-full'>
+					<div className='side-bar'>
+						<Sidebar sidebarOpen={onClick} active={active} />
+					</div>
+					<div className='w-full flex justify-end'>
+						<div className='lg:w-[calc(100%_-_250px)] w-full relative'>
+							<Navbar sidebarOpen={onClick} />
+							<Routing />
+						</div>
 					</div>
 				</div>
 			</Router>

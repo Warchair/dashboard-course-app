@@ -56,7 +56,7 @@ export const dataMessage = [
 		id: 1,
 		avatar: avatar1,
 		name: "Tony Stark",
-		thumbMsg: "my new technology will...",
+		thumbMsg: "my new technology...",
 		time: "4.55pm",
 	},
 	{

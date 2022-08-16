@@ -10,7 +10,7 @@ import Statistic from "../pages/statistic/statistic"
 
 function Routing() {
 	return (
-		<div className='md:w-[calc(100vw_-_250px)] w-full font-inter'>
+		<div className='w-full font-inter'>
 			<Routes>
 				<Route path='/omni-course/overview' element={<Overview />} />
 				<Route path='/omni-course/course' element={<Course />} />

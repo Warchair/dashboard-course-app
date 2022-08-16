@@ -7,7 +7,7 @@ import TableCourses from '../../component/tables/tablesCourse';
 function Course() {
 
   return (
-    <div className='md:pl-12 pl-0 mt-20 '>
+    <div className='p-4'>
         <div className='course'>
           <h3 className='text-2xl font-semibold my-3'>Course</h3>
           <div className='flex gap-5 mt-5'>

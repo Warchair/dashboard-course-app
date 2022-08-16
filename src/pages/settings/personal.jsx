@@ -1,11 +1,15 @@
 import React from 'react'
 
-function Personal() {
+function Personal(props) {
   return (
-    <div className='personal-info py-5 z-10 lg:w-[calc(100%_-_22rem)] w-full'>
-            <div>
-            <h1 className='text-2xl font-semibold text-black mb-5'>Personal Informations</h1>
-            <hr />
+    <div className='personal-info py-5 w-full'>
+            <div className='flex gap-2 items-center pb-2 border-b border-gray-200'>
+                <button className='md:hidden block' onClick={props.setCloseSet} >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                  </svg>
+                </button>
+                <h1 className='md:text-2xl text-xl font-semibold text-black'>Personal Informations</h1>
             </div>
             <div className='mt-5'>
               <h2 className='text-lg font-medium'>Profile</h2>

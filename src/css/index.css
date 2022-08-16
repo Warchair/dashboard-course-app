@@ -46,7 +46,7 @@
     
     /* navbar */
     .navbar {
-        @apply flex justify-end fixed w-full bg-white px-4 md:z-[30] z-[998]
+        @apply bg-white px-4 md:z-[30] z-[998]
     }
     
     .position-sticky {
@@ -54,7 +54,7 @@
     }
 
     .body-navbar {
-        @apply md:w-[calc(100vw_-_250px)] w-full flex md:flex-row flex-col md:items-center md:justify-between md:gap-0 gap-4 md:pl-12 pl-0 py-4 text-sm md:z-[30] z-[998]
+        @apply w-full flex md:flex-row flex-col md:items-center md:justify-between md:gap-0 gap-4 py-4 text-sm md:z-[30] z-[998]
     }
 
     .navbar-closed {

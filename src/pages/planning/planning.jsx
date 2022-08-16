@@ -8,63 +8,158 @@ import getDay from 'date-fns/getDay';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import DatePicker from 'react-datepicker';
 
+
+
 function Planning() {
 
-    const [value, onChange] = useState(new Date());
-    const locales ={ 
-        "en-US": require('date-fns/locale/en-US')
+    const calendar = {
+        days: [
+            "Mon", "Tue","Wed","Thur","Fri","Sat","Sun"
+        ],
     }
 
-    const localizer =  dateFnsLocalizer({
-        format,
-        parse,
-        startOfWeek,
-        getDay,
-        locales
-    })
+    const [openDetails, setOpenDetails] = useState(false);
 
-    const Events = [
-        {
-            title:"Big Meeting",
-            start: new Date(2018, 0, 1, 10, 0), // 10.00 AM
-            end: new Date(2018, 0, 1, 12, 0)
-        },
-        {
-            title:"Documentations",
-            start: new Date(2018, 0, 2, 12, 0), // 10.00 AM
-            end: new Date(2018, 0, 2, 13, 0)
-        },
-        {
-            title:"Investigation",
-            start: new Date(2018, 0, 3, 8, 0), // 10.00 AM
-            end: new Date(2018, 0, 3, 12, 0)
-        },
-    ]
-
+    const openClick = () => {
+        setOpenDetails(true);
+    }
 
   return (
-    <div className='md:pl-12 pl-0 mt-20 '>
-        <div className='planning mb-5'>
-            <h3 className='text-2xl font-semibold my-3'>Planning</h3>
-            <div className='grid grid-cols-10 gap-5'>
-                <div className="col-span-7 rounded-lg bg-white overflow-x-auto h-screen">
-                    <Calendar 
-                        localizer={localizer} 
-                        events={Events}
-                        step="60"
-                        view='week'
-                        views={['week']}
-                        startAccessor="start"
-                        endAccessor="end"
-                        toolbar={false}
-                        dayLayoutAlgorithm="no-overlap"
-                        min={new Date(2018, 0, 1, 8, 0)} // 8.00 AM
-                        max={new Date(2018, 0, 12, 18, 0)} // Max will be 6.00 PM!
-                        date={new Date(2018, 0, 1)}
-                    />
+    <div className=''>
+        <div className='relative flex overflow-x-hidden'>
+            <div className={`lg:w-[calc(100%_-_600px)] md:w-[calc(100%_-_350px)] w-full h-[calc(100%_-_72px)] md:fixed md:min-w-0 min-w-full bg-whitegray md:p-8 p-4 overflow-x-hidden md:overflow-y-scroll no-scrollbar transition-all duration-300 ease-out ${openDetails ? "md:translate-x-0 -translate-x-full" : "translate-x-0"}`}>
+                <h4 className='font-semibold text-lg'>August 10, 2020</h4>
+                <div className='py-4 flex gap-2'>
+                    {Array.from(Array(9), (item, index) => {
+                        return (
+                            <div key={index} className='font-normal text-md text-center px-4 py-6 rounded-3xl border border-gray-300 hover:bg-blue-400 hover:border-blue-400 hover:text-white group cursor-pointer'>
+                                <p className='text-gray-400 group-hover:text-gray-100'>Mon</p>
+                                <p className='font-medium'>{index}</p>
+                            </div>
+                        )
+                    })}
                 </div>
-                <div className="col-span-3 rounded-lg bg-white">
-                    {/* <Calendar onChange={onChange} value={value} /> */}
+                <div className='flex justify-between py-4'>
+                    <h3 className='font-semibold '>Upcoming Appointments</h3>
+                    <a href="#" className='text-blue-400'>View All</a>
+                </div>
+                <div className='py-4'>
+                    <div className='grid grid-cols-[70px,repeat(1,1fr)] grid-rows-[70px,repeat(9,70px)]'>
+                        <div class="row-start-[1] col-start-[1] text-left text-sm -mt-3 text-gray-400">8 AM</div>
+                        <div class="row-start-[1] col-start-[2] border-t  border-t-gray-300"></div>
+                        <div class="row-start-[2] col-start-[1] text-left text-sm -mt-3  text-gray-400">9 AM</div>
+                        <div class="row-start-[2] col-start-[2] border-t border-dashed border-t-gray-300"></div>
+                        <div class="row-start-[3] col-start-[1] text-left text-sm -mt-3 text-gray-400">10 AM</div>
+                        <div class="row-start-[3] col-start-[2] border-t  border-t-gray-300"></div>
+                        <div class="row-start-[4] col-start-[1] text-left text-sm -mt-3  text-gray-400">11 AM</div>
+                        <div class="row-start-[4] col-start-[2] border-t border-dashed border-t-gray-300"></div>
+                        <div class="row-start-[5] col-start-[1] text-left text-sm -mt-3 text-gray-400">12 AM</div>
+                        <div class="row-start-[5] col-start-[2] border-t  border-t-gray-300"></div>
+                        <div class="row-start-[6] col-start-[1] text-left text-sm -mt-3  text-gray-400">1 PM</div>
+                        <div class="row-start-[6] col-start-[2] border-t border-dashed border-t-gray-300"></div>
+                        <div class="row-start-[7] col-start-[1] text-left text-sm -mt-3 text-gray-400">2 PM</div>
+                        <div class="row-start-[7] col-start-[2] border-t  border-t-gray-300"></div>
+                        <div class="row-start-[8] col-start-[1] text-left text-sm -mt-3  text-gray-400">3 PM</div>
+                        <div class="row-start-[8] col-start-[2] border-t border-dashed border-t-gray-300"></div>
+                        <div class="row-start-[9] col-start-[1] text-left text-sm -mt-3 text-gray-400">4 PM</div>
+                        <div class="row-start-[9] col-start-[2] border-t  border-t-gray-300"></div>
+                        <div class="row-start-[10] col-start-[1] text-left text-sm -mt-3  text-gray-400">5 PM</div>
+                        <div class="row-start-[10] col-start-[2] border-t border-dashed border-t-gray-300"></div>
+                        <div class="row-start-[1] col-start-2 row-span-2 md:w-3/4 w-full justify-self-end bg-blue-100 rounded-lg p-4 flex items-center gap-4">
+                            <div className='w-14 h-14 rounded-xl bg-blue-200 flex justify-center items-center text-gray-400 '>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                                </svg>
+                            </div>
+                            <div className='text-gray-500 flex flex-col gap-2'>
+                                <h4 className='font-semibold'>Flutter Course</h4>
+                                <p className='text-sm'>Mobile Dev (08.00 AM - 10.00 AM)</p>
+                            </div>
+                        </div>
+                        <div class="row-start-[4] col-start-2 row-span-2 md:w-3/4 w-full justify-self-end bg-indigo-50 rounded-lg p-4 flex items-center gap-4 cursor-pointer" onClick={openClick}>
+                            <div className='w-14 h-14 rounded-xl bg-blue-200 flex justify-center items-center text-gray-400 '>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                                </svg>
+                            </div>
+                            <div className='text-gray-500 flex flex-col gap-2'>
+                                <h4 className='font-semibold'>React Native Course</h4>
+                                <p className='text-sm'>Mobile Dev (11.00 AM - 1.00 PM)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='w-full md:flex md:justify-end md:min-w-0 min-w-full'>
+                <div className={`md:w-[350px] w-full gap-4 md:px-8 px-4 py-4 transition-all duration-300 ease-out ${openDetails ? "md:-translate-x-0  -translate-x-full" : "-translate-x-0"}`}>
+                    <div className='flex items-center gap-4'>
+                        <button className='md:hidden block' onClick={() => setOpenDetails(false)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                            </svg>
+                        </button>
+                        <h2 className='text-lg  font-semibold text-gray-700 py-4'>Details</h2>
+                    </div>
+                    <div className='flex gap-4 items-center px-4 py-4 rounded-xl border border-gray-300'>
+                        <div className='w-14 h-14 rounded-xl bg-blue-200 flex justify-center items-center text-gray-400 '>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                            </svg>
+                        </div>
+                        <div className='text-gray-500 flex flex-col gap-2'>
+                            <h4 className='font-semibold'>React Native Course</h4>
+                            <p className='text-sm'>104 Modules & 25 Videos</p>
+                        </div>
+                    </div>
+                    <div className='py-4'>
+                        <h2 className='text-md font-semibold text-gray-700 py-4'>Informations</h2>
+                        <div className='flex flex-col gap-4'>
+                            <div className='flex gap-4 items-center text-gray-700'>
+                                <div className='w-10 h-10 rounded-lg bg-blue-100'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 p-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <h4>11.00 AM - 01.00 PM</h4>
+                            </div>
+                            <div className='flex gap-4 items-center text-gray-700'>
+                                <div className='w-10 h-10 rounded-lg bg-red-100'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 p-2 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                                    </svg>
+                                </div>
+                                <h4>Hermantyo Kusumo</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='py-4'>
+                        <h2 className='text-md font-semibold text-gray-700 py-4'>Description</h2>
+                        <div className='text-sm flex flex-col gap-3'>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sapiente dolore animi, culpa inventore ea fugiat dolorum odio harum aspernatur, illum at nemo consectetur aliquid!</p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi maiores omnis quis vero iure aliquid distinctio mollitia reiciendis!</p>
+                        </div>
+                    </div>
+                    <div className='py-4'>
+                        <h2 className='text-md font-semibold text-gray-700 py-4'>Category</h2>
+                        <div className='text-sm flex gap-3'>
+                            <div className='py-2 px-4 rounded-full border hover:bg-blue-400 hover:text-white cursor-pointer border-gray-200'>
+                                <p>Mobile Dev</p>
+                            </div>
+                            <div className='py-2 px-4 rounded-full border hover:bg-blue-400 hover:text-white cursor-pointer border-gray-200'>
+                                <p>Front End</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='py-4'>
+                        <div className='text-md grid grid-cols-2 gap-2 text-center'>
+                            <div className='py-4 px-4 rounded-2xl border bg-blue-400 text-white cursor-pointer border-gray-200'>
+                                <p>Open Course</p>
+                            </div>
+                            <div className='py-4 px-4 rounded-2xl border  cursor-pointer border-gray-200'>
+                                <p>Cancel</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ function Navbar(props) {
         setOpen(!open);
     }
 	return (
-		<div class='navbar relative'>
+		<div class='navbar position-sticky top-0'>
 			<div className='body-navbar'>
                 <div className='items-navbar-left'>
                     <div className='md:hidden flex items-center gap-4 '>
