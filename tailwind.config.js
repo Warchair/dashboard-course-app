@@ -3,10 +3,15 @@ module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
 		extend: {
+			lineHeight: {
+				inherit: "inherit",
+			},
+			width: {
+				inherit: "inherit",
+			},
 			gridTemplateColumns: {
 				// Simple 16 column grid
 				16: "repeat(16, minmax(0, 1fr))",
-
 				// Complex site-specific column configuration
 				paymentcard: "repeat(3, 220px)",
 			},
@@ -14,7 +19,6 @@ module.exports = {
 				height: "height",
 				spacing: "margin, padding",
 			},
-
 			fontFamily: {
 				inter: "Inter",
 				roboto: "Roboto",

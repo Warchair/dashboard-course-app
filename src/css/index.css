@@ -78,7 +78,7 @@
         }
         
     .notif-orange {
-        @apply absolute flex justify-center items-center md:w-3 md:h-3 w-5 h-5 md:border-2 md:border-white  bg-orange-400  md:-top-0.5 md:-right-0.5 top-0 right-0 rounded-full  
+        @apply absolute flex justify-center items-center w-3 h-3 border-2 border-white  bg-orange-400  -top-0.5 -right-0.5 rounded-full  
     }
 
     .sidebar-mobile {
@@ -86,7 +86,7 @@
     }
 
     .sidebar-items {
-        @apply md:w-[250px] w-[calc(100%_-_50px)] z-[999] md:mt-0 mt-4 md:h-screen h-auto top-0 bottom-0 overflow-y-scroll fixed bg-white md:rounded-none rounded-lg  md:py-4 md:px-4
+        @apply md:w-[250px] w-[calc(100%_-_50px)] z-[999] md:mt-0 mt-4 md:h-screen h-auto top-0 bottom-0 overflow-y-scroll bg-white md:rounded-none rounded-lg  md:py-4 md:px-4
     }
 
     .sidebar-closed {

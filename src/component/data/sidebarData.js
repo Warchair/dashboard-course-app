@@ -359,25 +359,29 @@ export const dataMenu = [
 export const dataClassCompleted = [
 	{
 		title: "Java Code",
-		count: "75",
+		count: 75,
+		percentage: "w-[75%]",
 		colorBg: "bg-orange-100",
 		colorFill: "bg-orange-400",
 	},
 	{
 		title: "Design Basic",
-		count: "65",
+		count: 65,
+		percentage: "w-[65%]",
 		colorBg: "bg-blue-100",
 		colorFill: "bg-blue-400",
 	},
 	{
 		title: "Team Building",
-		count: "30",
+		count: 30,
+		percentage: "w-[30%]",
 		colorBg: "bg-indigo-100",
 		colorFill: "bg-indigo-400",
 	},
 	{
 		title: "Bussines",
-		count: "25",
+		count: 25,
+		percentage: "w-[25%]",
 		colorBg: "bg-purple-100",
 		colorFill: "bg-purple-400",
 	},

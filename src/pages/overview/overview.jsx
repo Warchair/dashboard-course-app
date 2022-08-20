@@ -21,15 +21,15 @@ function Overview() {
           </div>
           <ChartLine />
         </div>
-        <div className='grid lg:grid-cols-7 grid-cols-1 gap-5'>
-          <div className='bg-white py-4 px-4 rounded-lg lg:col-span-4'>
+        <div className='grid grid-cols-7 gap-5'>
+          <div className='bg-white py-4 px-4 rounded-lg md:col-span-4 col-span-7'>
             <div className='py-3 flex flex-row justify-between items-center'>
               <h5 className='font-semibold text-lg'>Statistics</h5>
               <DropdownList />
             </div>
               <ChartBar />
           </div>
-          <div className='bg-white py-4 px-4 rounded-lg lg:col-span-3'>
+          <div className='bg-white py-4 px-4 rounded-lg md:col-span-3 col-span-7'>
             <h5 className=' text-center font-semibold text-lg mb-3'>Course Activities</h5>
             <div className='flex justify-center'>
               <div className=' lg:w-10/12 w-full text-center'>
@@ -54,11 +54,11 @@ function Overview() {
       </div>
       <div className='xl:col-span-3 col-span-7 grid gap-4 '>
         <div className='bg-white  rounded-lg px-4 py-2'>
-          <div className='py-4 flex items-center justify-between items-center'>
+          <div className='py-4 flex justify-between items-center relative'>
             <h4 className='font-medium text-lg'>My Planning</h4>
             <DropdownList />
           </div>
-          <div className=' grid grid-col-1 gap-3 py-2'>
+          <div className='grid grid-col-1 gap-3 py-2'>
             {dataPlanning.map((item) => {
               return (
                 <CardPlanning image={item.image} time={item.time} title={item.title} />
@@ -78,7 +78,7 @@ function Overview() {
           <div className='flex flex-col gap-7 py-4'>
             {dataClassCompleted.map((item) => {
               return (
-                <CardCompleted title={item.title} count={item.count} colorBg={item.colorBg} colorFill={item.colorFill} />
+                <CardCompleted title={item.title} count={item.count} colorBg={item.colorBg} colorFill={item.colorFill} percentage={item.percentage} />
               )
             })}
           </div>

@@ -12,11 +12,9 @@ import DatePicker from 'react-datepicker';
 
 function Planning() {
 
-    const calendar = {
-        days: [
-            "Mon", "Tue","Wed","Thur","Fri","Sat","Sun"
-        ],
-    }
+    const days = [
+        "Mon", "Tue","Wed","Thur","Fri","Sat","Sun"
+    ]
 
     const [openDetails, setOpenDetails] = useState(false);
 
@@ -26,15 +24,15 @@ function Planning() {
 
   return (
     <div className=''>
-        <div className='relative flex overflow-x-hidden'>
-            <div className={`lg:w-[calc(100%_-_600px)] md:w-[calc(100%_-_350px)] w-full h-[calc(100%_-_72px)] md:fixed md:min-w-0 min-w-full bg-whitegray md:p-8 p-4 overflow-x-hidden md:overflow-y-scroll no-scrollbar transition-all duration-300 ease-out ${openDetails ? "md:translate-x-0 -translate-x-full" : "translate-x-0"}`}>
+        <div className='relative flex'>
+            <div className={`grow h-[calc(100vh_-_72px)] sticky top-[72px] md:min-w-0 min-w-full bg-whitegray md:p-8 p-4 overflow-x-hidden overflow-y-scroll transition-all duration-300 ease-out no-scrollbar ${openDetails ? "md:translate-x-0 -translate-x-full" : "translate-x-0"}`}>
                 <h4 className='font-semibold text-lg'>August 10, 2020</h4>
-                <div className='py-4 flex gap-2'>
-                    {Array.from(Array(9), (item, index) => {
+                <div className='py-4 flex gap-2 md:overflow-x-hidden overflow-x-scroll'>
+                    {days.map((item, index) => {
                         return (
-                            <div key={index} className='font-normal text-md text-center px-4 py-6 rounded-3xl border border-gray-300 hover:bg-blue-400 hover:border-blue-400 hover:text-white group cursor-pointer'>
-                                <p className='text-gray-400 group-hover:text-gray-100'>Mon</p>
-                                <p className='font-medium'>{index}</p>
+                            <div key={index} className='font-normal text-md text-center py-6 w-[70px] flex-none rounded-3xl border border-gray-300 hover:bg-blue-400 hover:border-blue-400 hover:text-white group cursor-pointer'>
+                                <p className='text-gray-400 group-hover:text-gray-100'>{item}</p>
+                                <p className='font-medium'>1{index}</p>
                             </div>
                         )
                     })}
@@ -45,25 +43,25 @@ function Planning() {
                 </div>
                 <div className='py-4'>
                     <div className='grid grid-cols-[70px,repeat(1,1fr)] grid-rows-[70px,repeat(9,70px)]'>
-                        <div class="row-start-[1] col-start-[1] text-left text-sm -mt-3 text-gray-400">8 AM</div>
+                        <div class="row-start-[1] col-start-[1] text-left text-xs -mt-2 text-gray-400">8 AM</div>
                         <div class="row-start-[1] col-start-[2] border-t  border-t-gray-300"></div>
-                        <div class="row-start-[2] col-start-[1] text-left text-sm -mt-3  text-gray-400">9 AM</div>
+                        <div class="row-start-[2] col-start-[1] text-left text-xs -mt-2  text-gray-400">9 AM</div>
                         <div class="row-start-[2] col-start-[2] border-t border-dashed border-t-gray-300"></div>
-                        <div class="row-start-[3] col-start-[1] text-left text-sm -mt-3 text-gray-400">10 AM</div>
+                        <div class="row-start-[3] col-start-[1] text-left text-xs -mt-2 text-gray-400">10 AM</div>
                         <div class="row-start-[3] col-start-[2] border-t  border-t-gray-300"></div>
-                        <div class="row-start-[4] col-start-[1] text-left text-sm -mt-3  text-gray-400">11 AM</div>
+                        <div class="row-start-[4] col-start-[1] text-left text-xs -mt-2  text-gray-400">11 AM</div>
                         <div class="row-start-[4] col-start-[2] border-t border-dashed border-t-gray-300"></div>
-                        <div class="row-start-[5] col-start-[1] text-left text-sm -mt-3 text-gray-400">12 AM</div>
+                        <div class="row-start-[5] col-start-[1] text-left text-xs -mt-2 text-gray-400">12 AM</div>
                         <div class="row-start-[5] col-start-[2] border-t  border-t-gray-300"></div>
-                        <div class="row-start-[6] col-start-[1] text-left text-sm -mt-3  text-gray-400">1 PM</div>
+                        <div class="row-start-[6] col-start-[1] text-left text-xs -mt-2  text-gray-400">1 PM</div>
                         <div class="row-start-[6] col-start-[2] border-t border-dashed border-t-gray-300"></div>
-                        <div class="row-start-[7] col-start-[1] text-left text-sm -mt-3 text-gray-400">2 PM</div>
+                        <div class="row-start-[7] col-start-[1] text-left text-xs -mt-2 text-gray-400">2 PM</div>
                         <div class="row-start-[7] col-start-[2] border-t  border-t-gray-300"></div>
-                        <div class="row-start-[8] col-start-[1] text-left text-sm -mt-3  text-gray-400">3 PM</div>
+                        <div class="row-start-[8] col-start-[1] text-left text-xs -mt-2  text-gray-400">3 PM</div>
                         <div class="row-start-[8] col-start-[2] border-t border-dashed border-t-gray-300"></div>
-                        <div class="row-start-[9] col-start-[1] text-left text-sm -mt-3 text-gray-400">4 PM</div>
+                        <div class="row-start-[9] col-start-[1] text-left text-xs -mt-2 text-gray-400">4 PM</div>
                         <div class="row-start-[9] col-start-[2] border-t  border-t-gray-300"></div>
-                        <div class="row-start-[10] col-start-[1] text-left text-sm -mt-3  text-gray-400">5 PM</div>
+                        <div class="row-start-[10] col-start-[1] text-left text-xs -mt-2  text-gray-400">5 PM</div>
                         <div class="row-start-[10] col-start-[2] border-t border-dashed border-t-gray-300"></div>
                         <div class="row-start-[1] col-start-2 row-span-2 md:w-3/4 w-full justify-self-end bg-blue-100 rounded-lg p-4 flex items-center gap-4">
                             <div className='w-14 h-14 rounded-xl bg-blue-200 flex justify-center items-center text-gray-400 '>
@@ -90,8 +88,8 @@ function Planning() {
                     </div>
                 </div>
             </div>
-            <div className='w-full md:flex md:justify-end md:min-w-0 min-w-full'>
-                <div className={`md:w-[350px] w-full gap-4 md:px-8 px-4 py-4 transition-all duration-300 ease-out ${openDetails ? "md:-translate-x-0  -translate-x-full" : "-translate-x-0"}`}>
+            <div className='md:min-w-0 min-w-full w-[350px] flex-none'>
+                <div className={`gap-4 md:px-8 px-4 py-4 transition-all duration-300 ease-out ${openDetails ? "md:-translate-x-0  -translate-x-full" : "-translate-x-0"}`}>
                     <div className='flex items-center gap-4'>
                         <button className='md:hidden block' onClick={() => setOpenDetails(false)}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

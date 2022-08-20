@@ -3,7 +3,7 @@ import React from 'react'
 function CardPlanning(props) {
   return (
     <div>
-        <div className='flex items-center gap-4 justify-between px-3 py-3 rounded-lg drop-shadow-md bg-white w-full z-10'>
+        <div className='flex items-center gap-4 justify-between px-3 py-3 rounded-lg drop-shadow-md bg-white w-full '>
         <div className='flex items-center gap-4 '>
           <div>
             <img className=' h-16 w-16 rounded-xl' src={props.image} alt="" />

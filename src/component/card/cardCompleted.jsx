@@ -9,7 +9,7 @@ function CardCompleted(props) {
                 <h4 className='text-black'>{props.count}/100</h4>
               </div>
               <div className={`w-full h-5 ${props.colorBg}`}>
-                <div className={`w-[${props.count}%] h-full ${props.colorFill} rounded-md`}>
+                <div className={`${props.percentage} h-full ${props.colorFill} rounded-md`}>
                 </div>
               </div>
             </div>

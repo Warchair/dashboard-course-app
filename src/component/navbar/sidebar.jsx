@@ -42,20 +42,20 @@ function Sidebar(props) {
 	})
 
 	return (
-			<div className={props.active === false ? 'lg:block hidden' : "sidebar-mobile"  }>
-				<div className="sidebar-items no-scrollbar">
-					<div className="md:block hidden">
+			<div>
+				<div className={`w-[250px] z-[999] px-4 py-4 overflow-y-scroll h-screen bg-white no-scrollbar lg:relative absolute transition-all duration-300 ease-out ${props.active ? "translate-x-0" : "lg:translate-x-0 -translate-x-[250px]"}`}>
+					<div className="">
 						<div className='flex gap-3 items-center'>
-							<img src={logo} alt='' />
-							<h4 className='font-bold text-xl'>Omni.</h4>
+							<div className="text-gray-700 cursor-pointer lg:hidden block" onClick={props.sidebarOpen}>
+								<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+									<path fillRule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
+								</svg>
+							</div>
+							<div className="flex gap-2 items-center">
+								<img src={logo} alt='' />
+								<h4 className='font-bold text-xl'>Omni.</h4>
+							</div>
 						</div>
-					</div>
-					<div className="md:hidden h-16 bg-white w-[calc(100%_-_50px)] rounded-t-lg fixed flex items-center justify-end px-4 py-4">
-						<button  onClick={props.sidebarOpen}>
-							<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-							<path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-							</svg>
-						</button>
 					</div>
 					<div className="md:px-0 md:py-0 px-4 pt-16 py-4 ">
 						<div class='md:mt-10 font-medium text-md text-gray-400'>

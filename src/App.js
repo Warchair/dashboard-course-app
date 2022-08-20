@@ -15,15 +15,21 @@ function App() {
 	return (
 		<div className='font-inter'>
 			<Router>
-				<div className='bg-gray-100 min-h-screen w-full'>
+				<div className='bg-gray-100 h-screen w-full overflow-y-hidden flex'>
+					{/* sidebar */}
 					<div className='side-bar'>
+						<div
+							className={`absolute top-0 left-0 bottom-0 right-0 bg-gray-400/20 z-[100] ${
+								active ? "lg:hidden block" : "hidden"
+							}`}
+							onClick={onClick}
+						></div>
 						<Sidebar sidebarOpen={onClick} active={active} />
 					</div>
-					<div className='w-full flex justify-end'>
-						<div className='lg:w-[calc(100%_-_250px)] w-full relative'>
-							<Navbar sidebarOpen={onClick} />
-							<Routing />
-						</div>
+					{/* main content */}
+					<div className='relative overflow-y-scroll overflow-x-hidden grow'>
+						<Navbar sidebarOpen={onClick} />
+						<Routing />
 					</div>
 				</div>
 			</Router>
