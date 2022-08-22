@@ -1,8 +1,6 @@
 import React from 'react'
 import CardActivity from '../../component/card/cardActivity'
-import ChartBar from '../../component/charts/barChart'
 import ChartBar2 from '../../component/charts/barChart2'
-import ChartLine from '../../component/charts/lineChart'
 import ChartLine2 from '../../component/charts/lineChart2'
 import { dataCourseActivity } from '../../component/data/chartData'
 import DropdownList from '../../component/dropdown/dropdownList'

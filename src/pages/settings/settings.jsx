@@ -21,7 +21,7 @@ function Settings() {
 
   return (
     <div className='relative flex '>
-      <div className={`w-[300px] h-[calc(100vh_-_72px)] sticky top-[72px] bg-whitegray md:min-w-0 min-w-full transition-all duration-300 ease-out ${openSettings  ? "md:-translate-x-0 -translate-x-full"  :  "translate-x-0" }`}>
+      <div className={`w-[300px] h-[calc(100vh_-_78px)] sticky top-[78px] bg-whitegray md:min-w-0 min-w-full transition-all duration-300 ease-out ${openSettings  ? "md:-translate-x-0 -translate-x-full"  :  "translate-x-0" }`}>
         <SidebarSetting setOpenSet={OpenSet} />
       </div>
       <div className={`grow md:min-w-0 min-w-full px-4 transition-all duration-300 ease-out ${openSettings ?  "md:-translate-x-0 -translate-x-full" : "-translate-x-0" } `}>
@@ -39,9 +39,9 @@ function Settings() {
             path='/billing-informations'
             element={<Billing setCloseSet={CloseSet} />}
             />
-          {/* <Route
-            path='/omni-course/settings'
-            element={<Navigate replace to='/omni-course/settings/personal-informations' />} /> */}
+          <Route
+            path='/'
+            element={<Navigate replace to='/omni-course/settings/personal-informations' />} />
         </Routes>
       </div>
 

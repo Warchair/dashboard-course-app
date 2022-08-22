@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { itemSettings } from '../../component/data/sidebarData'
+import { itemSettings } from '../data/data'
 
 function SidebarSetting(props) {
 

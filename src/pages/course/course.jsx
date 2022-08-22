@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import CardCourse from '../../component/card/cardCourse';
-import { dataCourse, dataListing } from '../../component/data/sidebarData';
+import { dataCourse, dataListing } from '../../component/data/data';
 import TableCourses from '../../component/tables/tablesCourse';
 
 function Course() {
@@ -11,9 +11,9 @@ function Course() {
         <div className='course'>
           <h3 className='text-2xl font-semibold my-3'>Course</h3>
           <div className='flex gap-5 mt-5'>
-            <a href="" className='border-b-2 font-medium text-black border-blue-400'>All</a>
-            <a href="" className='hover:border-b-2 font-medium text-gray-400 hover:text-black border-blue-400'>Active</a>
-            <a href="" className='hover:border-b-2 font-medium text-gray-400 hover:text-black border-blue-400'>Completed</a>
+            <a href="#" className='border-b-2 font-medium text-black border-blue-400'>All</a>
+            <a href="#" className='hover:border-b-2 font-medium text-gray-400 hover:text-black border-blue-400'>Active</a>
+            <a href="#" className='hover:border-b-2 font-medium text-gray-400 hover:text-black border-blue-400'>Completed</a>
           </div>
           <div className='flex flex-nowrap overflow-x-auto gap-5 my-5'>
               {dataCourse.map((item) => {

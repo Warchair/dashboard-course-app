@@ -6,8 +6,10 @@ import CardTopTutor from '../../component/card/cardTopTutor'
 import ChartBar from '../../component/charts/barChart';
 import ChartLine from '../../component/charts/lineChart';
 import ChartDoughnut from '../../component/charts/pieChart';
-import { dataPlanning, dataTop, dataClassCompleted } from '../../component/data/sidebarData'
+import { dataPlanning, dataTop, dataClassCompleted } from '../../component/data/data'
 import DropdownList from '../../component/dropdown/dropdownList';
+import { DotsHorizontalIcon } from "@heroicons/react/outline"
+
 
 
 function Overview() {
@@ -70,9 +72,7 @@ function Overview() {
           <div className='py-2 flex items-center justify-between'>
             <h4 className='font-medium text-lg'>Complated Courses</h4>
             <div>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-              </svg>
+              <DotsHorizontalIcon className="h-6 w-6" />
             </div>
           </div>
           <div className='flex flex-col gap-7 py-4'>

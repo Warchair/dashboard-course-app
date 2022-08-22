@@ -1,6 +1,8 @@
 import React from "react"
 import logo from "../../assets/icons/logo.png"
-import { dataAccount, dataMenu } from "../data/sidebarData"
+import { dataAccount, dataMenu } from "../data/data"
+
+import { ArrowNarrowLeftIcon } from "@heroicons/react/solid"
 import image from "../../assets/pict/vector.png"
 import { NavLink } from "react-router-dom"
 
@@ -11,11 +13,11 @@ function Sidebar(props) {
 				to={item.layout + item.location}
 				key={index}
 				onClick={props.sidebarOpen}
-				className={
-					window.location.href.indexOf(item.layout + item.location) > -1
-						? "sidebar-item sidebar-active"
-						: "sidebar-item hover:bg-blue-600 hover:text-white"
-				}
+				className={`sidebar-item
+					${window.location.href.indexOf(item.layout + item.location) > -1
+						? "sidebar-active"
+						: ""}
+				`}
 			>
 				<p>{item.icons}</p>
 				<h6>{item.title}</h6>
@@ -47,9 +49,7 @@ function Sidebar(props) {
 					<div className="">
 						<div className='flex gap-3 items-center'>
 							<div className="text-gray-700 cursor-pointer lg:hidden block" onClick={props.sidebarOpen}>
-								<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-									<path fillRule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
-								</svg>
+								<ArrowNarrowLeftIcon className="h-6 w-6" />
 							</div>
 							<div className="flex gap-2 items-center">
 								<img src={logo} alt='' />
@@ -57,7 +57,7 @@ function Sidebar(props) {
 							</div>
 						</div>
 					</div>
-					<div className="md:px-0 md:py-0 px-4 pt-16 py-4 ">
+					<div className="lg:pt-0 pt-8">
 						<div class='md:mt-10 font-medium text-md text-gray-400'>
 							<div class='menu'>
 								<h4 className=' text-md text-black'>Menu</h4>

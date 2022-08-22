@@ -43,35 +43,6 @@
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
     }
-    
-    /* navbar */
-    .navbar {
-        @apply bg-white px-4 md:z-[30] z-[998]
-    }
-    
-    .position-sticky {
-        position:sticky;
-    }
-
-    .body-navbar {
-        @apply w-full flex md:flex-row flex-col md:items-center md:justify-between md:gap-0 gap-4 py-4 text-sm md:z-[30] z-[998]
-    }
-
-    .navbar-closed {
-        @apply md:static absolute left-0 -top-40 md:py-0 md:px-0 py-4 px-4 md:opacity-100 opacity-0 transition-all duration-500 z-[99]
-    }
-
-    .navbar-open {
-        @apply md:static absolute left-0 top-16 md:py-0 md:px-0  py-4 px-4 md:opacity-100 opacity-100 transition-all duration-500 z-[99]
-    }
-
-    .items-navbar-right {
-        @apply flex md:flex-row flex-col md:gap-0 gap-5 md:items-center md:justify-between w-full bg-white md:z-[30] z-[99]
-    }
-
-    .items-navbar-left {
-        @apply md:hidden flex justify-between items-center w-full md:z-[30] z-[998]
-    }
 
     .logo-brand {
             @apply flex gap-3 items-center z-20
@@ -81,39 +52,17 @@
         @apply absolute flex justify-center items-center w-3 h-3 border-2 border-white  bg-orange-400  -top-0.5 -right-0.5 rounded-full  
     }
 
-    .sidebar-mobile {
-        @apply md:static fixed z-[999] md:w-auto md:h-auto w-full h-screen md:px-0 md:py-0 flex md:block justify-center bg-gray-300 bg-opacity-30
-    }
-
-    .sidebar-items {
-        @apply md:w-[250px] w-[calc(100%_-_50px)] z-[999] md:mt-0 mt-4 md:h-screen h-auto top-0 bottom-0 overflow-y-scroll bg-white md:rounded-none rounded-lg  md:py-4 md:px-4
-    }
-
-    .sidebar-closed {
-        @apply  -left-40 md:opacity-100 opacity-0 transition-all duration-500 z-[99]
-    }
-
-    .sidebar-open {
-        @apply  left-0 md:opacity-100 opacity-100 transition-all duration-500 z-[99]
-    }
-
-    .main-bar {
-        width: calc(100vw - 250px);
-    }
-
     .sidebar-active {
         @apply bg-blue-600 text-white
     }
 
     .sidebar-item {
-        @apply flex items-center gap-2 px-6 py-4 rounded-xl cursor-pointer
+        @apply flex items-center gap-2 px-6 py-4 rounded-xl cursor-pointer hover:bg-blue-600 hover:text-white
     }
     
-
     .layout-parent {
         @apply grid grid-cols-7 gap-5
     }
-
 
     .layout-child-big {
         @apply lg:col-span-4  col-span-7 grid gap-5
@@ -126,18 +75,7 @@
     .search {
         @apply font-medium text-gray-500 py-2 bg-gray-100 pl-10 px-2 rounded-lg focus:outline-none md:w-64 w-full text-base
     }
-
-    .course-info {
-        @apply h-12 px-2 z-10 hover:text-gray-900 hover:border-blue-600 hover:border-b-2
-    }
-
-    .items-content {
-        @apply py-4 px-4 rounded-lg bg-white flex justify-between items-center
-    }
-
 }
-
-
 
 .rbc-allday-cell {
     display: none !important;
