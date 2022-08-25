@@ -15,11 +15,11 @@ function App() {
 	return (
 		<div className='font-inter'>
 			<Router>
-				<div className='bg-gray-100 h-screen w-full overflow-y-hidden flex'>
+				<div className='bg-gray-100 dark:bg-slate-900 h-screen w-full overflow-y-hidden flex'>
 					{/* sidebar */}
 					<div className='side-bar'>
 						<div
-							className={`absolute top-0 left-0 bottom-0 right-0 bg-gray-400/20 z-[100] ${
+							className={`absolute top-0 left-0 bottom-0 right-0 bg-gray-400/20 dark:bg-gray-900/50 z-[100] ${
 								active ? "lg:hidden block" : "hidden"
 							}`}
 							onClick={onClick}

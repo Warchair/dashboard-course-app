@@ -11,8 +11,8 @@ export function Message() {
 					<div className='notif-orange'></div>
 				</div>
 			</Menu.Button>
-			<Menu.Items className='origin-top-right absolute right-0 lg:w-52 w-48 flex flex-col rounded-lg bg-white border text-sm text-gray-600 shadow-md'>
-				<h6 className='font-semibold text-gray-600 uppercase px-4 py-2'>
+			<Menu.Items className='origin-top-right absolute right-0 lg:w-52 w-48 flex flex-col rounded-lg bg-white border border-gray-200 dark:border-slate-900 text-sm text-gray-600 dark:text-gray-300 shadow-md dark:bg-slate-800'>
+				<h6 className='font-semibold text-gray-600 dark:text-white uppercase px-4 py-2'>
 					Messages
 				</h6>
 				{dataMessage.slice(0, 4).map((item, index) => {
@@ -20,7 +20,9 @@ export function Message() {
 						<Menu.Item>
 							{({ active }) => (
 								<a
-									className={`px-4 py-2 border-b ${active && "bg-zinc-50"}`}
+									className={`px-4 py-2 border-b dark:border-b-slate-900 ${
+										active && "bg-zinc-50 dark:bg-slate-900"
+									}`}
 									href='#'
 								>
 									<div className='flex gap-2'>
@@ -28,7 +30,9 @@ export function Message() {
 											<img src={item.avatar} alt='' />
 										</div>
 										<div>
-											<h5 className='text-sm'>{item.name}</h5>
+											<h5 className='text-sm text-gray-800 dark:text-white'>
+												{item.name}
+											</h5>
 											<h5 className='text-xs'>{item.thumbMsg}</h5>
 										</div>
 									</div>

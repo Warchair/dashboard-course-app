@@ -10,14 +10,16 @@ export function Notifications() {
 					<div className='notif-orange'></div>
 				</div>
 			</Menu.Button>
-			<Menu.Items className='origin-top-right absolute right-0 w-72 flex flex-col rounded-lg bg-white border text-sm text-gray-600 shadow-md'>
-				<h6 className='font-semibold text-gray-600 uppercase px-4 py-2'>
+			<Menu.Items className='origin-top-right absolute right-0 w-72 flex flex-col rounded-lg bg-white dark:bg-slate-800 text-gray-600 dark:text-gray-300 border dark:border-slate-900 text-sm  shadow-md'>
+				<h6 className='font-semibold text-gray-600 dark:text-white uppercase px-4 py-2'>
 					Notifications
 				</h6>
 				<Menu.Item>
 					{({ active }) => (
 						<a
-							className={`px-4 py-2 border-b ${active && "bg-zinc-50"}`}
+							className={`px-4 py-2 border-b dark:border-b-slate-900 ${
+								active && "bg-zinc-50 dark:bg-slate-900"
+							}`}
 							href='#'
 						>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
@@ -30,7 +32,9 @@ export function Notifications() {
 				<Menu.Item>
 					{({ active }) => (
 						<a
-							className={`px-4 py-2 border-b ${active && "bg-zinc-50"}`}
+							className={`px-4 py-2 border-b dark:border-b-slate-900 ${
+								active && "bg-zinc-50 dark:bg-slate-900"
+							}`}
 							href='#'
 						>
 							amet consectetur adipisicing elit. Dolores tempora porro

@@ -18,8 +18,8 @@ function CourseDetail() {
     console.log(data);
 
   return (
-        <div className='p-4'>
-            <h3 className='text-2xl font-semibold'>Course</h3>
+        <div className='p-4 dark:text-gray-300'>
+            <h3 className='text-2xl font-semibold dark:text-white'>Course</h3>
             <div className='grid grid-cols-7 gap-5 mt-3'>
                 <div className='lg:col-span-4 col-span-7 mt-3'>
                     <div className='flex flex-col gap-5'>
@@ -32,18 +32,18 @@ function CourseDetail() {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex gap-4 font-medium sm:overflow-x-hidden overflow-x-scroll text-md border-b-2'>
+                        <div className='flex gap-4 font-medium sm:overflow-x-hidden overflow-x-scroll text-md border-b-2 dark:border-b-slate-800'>
                             <div className='h-full flex-none py-2 border-blue-600 border-b-2 z-10 w-20 text-center'>
-                                <a href="#" className='px-2  text-gray-900'>About</a>
+                                <a href="#" className='px-2  text-gray-900 dark:text-white'>About</a>
                             </div>
                             <div className='h-full flex-none py-2 hover:border-blue-600 hover:border-b-2 z-10 w-20 text-center'>
-                                <a href="#" className='px-2  hover:text-gray-900 text-gray-500 '>Details</a>
+                                <a href="#" className='px-2  hover:text-gray-900 dark:hover:text-white text-gray-500 '>Details</a>
                             </div>
                             <div className='h-full flex-none py-2 hover:border-blue-600 hover:border-b-2 z-10 w-20 text-center'>
-                                <a href="#" className='  px-2  hover:text-gray-900 text-gray-500'>Review</a>
+                                <a href="#" className='  px-2  hover:text-gray-900 dark:hover:text-white text-gray-500'>Review</a>
                             </div>
                             <div className='h-full flex-none py-2 hover:border-blue-600 hover:border-b-2 z-10 w-24 text-center'>
-                                <a href="#" className=' px-2  hover:text-gray-900 text-gray-500 '>Resource</a>
+                                <a href="#" className=' px-2  hover:text-gray-900 dark:hover:text-white text-gray-500 '>Resource</a>
                             </div>
                         </div>
                         <div>

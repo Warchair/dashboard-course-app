@@ -9,15 +9,15 @@ import { Search } from '../dropdown/search';
 function Navbar(props) {
 
 	return (
-		<div class='bg-white z-[99] sticky top-0'>
+		<div class='bg-white dark:bg-slate-800 z-[99] sticky top-0'>
 			<div className=''>
                     <div className="flex justify-between item-center px-4 py-4">
                         <div className='flex items-center gap-4 '>                            
                             <div className='lg:hidden block cursor-pointer' onClick={props.sidebarOpen}>
-                                <MenuAlt1Icon className="h-6 w-6" />
+                                <MenuAlt1Icon className="h-6 w-6 text-black dark:text-gray-300" />
                             </div>
                             <div className="md:block hidden relative">
-                                <input  type='text' className='search' placeholder="Search of Type" />
+                                <input  type='text' className='search dark:text-gray-200' placeholder="Search of Type" />
                                 <div className="absolute top-2 left-2">
                                     <SearchIcon className="h-6 w-6 text-gray-500"  />
                                 </div>
