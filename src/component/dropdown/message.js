@@ -21,7 +21,7 @@ export function Message() {
 							{({ active }) => (
 								<a
 									className={`px-4 py-2 border-b dark:border-b-slate-900 ${
-										active && "bg-zinc-50 dark:bg-slate-900"
+										active && "bg-zinc-50 dark:bg-slate-700"
 									}`}
 									href='#'
 								>

@@ -11,7 +11,6 @@ function Message() {
     const OpenMsg = () => {
         setMsgOpen(true);
     }
-    // console.log(msgOpen);
 
   return (
     <div>

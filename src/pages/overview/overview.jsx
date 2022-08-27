@@ -1,4 +1,3 @@
-import { data } from 'autoprefixer';
 import React from 'react'
 import CardCompleted from '../../component/card/cardCompleted'
 import CardPlanning from '../../component/card/cardPlanning'

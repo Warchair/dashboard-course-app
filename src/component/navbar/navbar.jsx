@@ -4,6 +4,7 @@ import {MenuAlt1Icon, SearchIcon } from "@heroicons/react/outline"
 import { Profile } from '../dropdown/profile';
 import { Message } from '../dropdown/message';
 import { Search } from '../dropdown/search';
+import Toggle from '../theme/theme';
 
 
 function Navbar(props) {
@@ -27,6 +28,7 @@ function Navbar(props) {
                             <Search />
                             <Message />
                             <Notifications />
+                            <Toggle />
                             <Profile />
                         </div>
                     </div>

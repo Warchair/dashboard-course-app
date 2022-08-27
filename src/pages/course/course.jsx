@@ -12,8 +12,8 @@ function Course() {
           <h3 className='text-2xl dark:text-white font-semibold my-3'>Course</h3>
           <div className='flex gap-5 mt-5'>
             <a href="#" className='border-b-2 font-medium text-black dark:text-white border-blue-500'>All</a>
-            <a href="#" className='hover:border-b-2 font-medium text-gray-400 hover:text-black border-blue-400'>Active</a>
-            <a href="#" className='hover:border-b-2 font-medium text-gray-400 hover:text-black border-blue-400'>Completed</a>
+            <a href="#" className='hover:border-b-2 font-medium text-gray-400 hover:text-black border-blue-400 dark:hover:text-white'>Active</a>
+            <a href="#" className='hover:border-b-2 font-medium text-gray-400 hover:text-black border-blue-400 dark:hover:text-white'>Completed</a>
           </div>
           <div className='flex flex-nowrap overflow-x-auto gap-5 my-5'>
               {dataCourse.map((item) => {

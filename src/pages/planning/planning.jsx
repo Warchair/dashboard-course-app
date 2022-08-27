@@ -22,8 +22,8 @@ function Planning() {
                 <div className='py-4 flex gap-2 md:overflow-x-hidden overflow-x-scroll'>
                     {days.map((item, index) => {
                         return (
-                            <div key={index} className='font-normal text-md text-center py-6 w-[70px] flex-none rounded-3xl border border-gray-300 dark:border-gray-600 hover:bg-blue-400 dark:hover:bg-blue-600 dark:hover:border-blue-600  hover:text-white group cursor-pointer'>
-                                <p className='text-gray-400 group-hover:text-gray-100'>{item}</p>
+                            <div key={index} className={`font-normal text-md text-center py-6 w-[70px] flex-none rounded-3xl border border-gray-300 dark:border-gray-600 hover:bg-blue-400 dark:hover:bg-blue-600 dark:hover:border-blue-600  hover:text-white group cursor-pointer ${index === 0 ? "dark:bg-blue-600 bg-blue-400 text-gray-100" : ""}`}>
+                                <p className={`text-gray-400 group-hover:text-gray-100 ${index === 0 ? 'text-gray-100' : "" }`}>{item}</p>
                                 <p className='font-medium'>1{index}</p>
                             </div>
                         )
@@ -119,7 +119,7 @@ function Planning() {
                     </div>
                     <div className='py-4'>
                         <h2 className='text-md font-semibold text-gray-700 dark:text-white py-4'>Category</h2>
-                        <div className='text-sm flex gap-3'>
+                        <div className='text-sm flex flex-wrap space-x-3 '>
                             <div className='py-2 px-4 rounded-full border hover:bg-blue-400 dark:hover:bg-blue-500 hover:text-white cursor-pointer border-gray-200'>
                                 <p>Mobile Dev</p>
                             </div>

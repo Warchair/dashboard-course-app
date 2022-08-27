@@ -10,10 +10,9 @@ function App() {
 	const onClick = () => {
 		setActive(!active)
 	}
-	console.log(active)
 
 	return (
-		<div className='font-inter'>
+		<div className='font-inter transition-colors duration-300 ease-out'>
 			<Router>
 				<div className='bg-gray-100 dark:bg-slate-900 h-screen w-full overflow-y-hidden flex'>
 					{/* sidebar */}
@@ -27,7 +26,7 @@ function App() {
 						<Sidebar sidebarOpen={onClick} active={active} />
 					</div>
 					{/* main content */}
-					<div className='relative overflow-y-scroll overflow-x-hidden grow'>
+					<div className='relative overflow-y-scroll overflow-x-hidden grow '>
 						<Navbar sidebarOpen={onClick} />
 						<Routing />
 					</div>
