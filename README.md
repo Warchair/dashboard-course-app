@@ -1,5 +1,17 @@
 [DEMO](https://dashboard-course-app.netlify.app/).
 
+**Dashboard Course App** 
+adalah sebuah project template Dashboard Web yang responsive di berbagai device baik di web maupun mobile, ui design ini diambil dari figma
+
+**Project ini Dibuat menggunakan**
+
+- react: ^18.2.0,
+- chart.js : ^2.9.4,
+- react-chartjs-2 : ^2.11.1,
+- react-router-dom : ^6.3.0,
+- tailwindcss: ^3.1.4
+
+
 Result in this Repository
 
 ![Screenshot (189)](https://user-images.githubusercontent.com/65278976/187042136-5fda4e79-b892-4e91-b84c-5e3929fca0c1.png)
